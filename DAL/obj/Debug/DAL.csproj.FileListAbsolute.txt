@@ -1,0 +1,13 @@
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\DAL.dll
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\DAL.pdb
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\Models.dll
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\EntityFramework.dll
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\Models.pdb
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\Models.dll.config
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\EntityFramework.xml
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\obj\Debug\DAL.dll
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\obj\Debug\DAL.pdb
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\DAL.dll.config
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git_Projects\Hao_CRUD_APP_2\DAL\bin\Debug\EntityFramework.SqlServer.xml
