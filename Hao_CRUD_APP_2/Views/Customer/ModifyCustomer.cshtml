@@ -1,0 +1,77 @@
+﻿@model Hao_CRUD_APP_2.Models.Customer
+@{
+    ViewBag.Title = "ModifyCustomer";
+    Layout = "~/Views/Shared/Main.cshtml";
+}
+
+@using (Html.BeginForm("ModifyCustomer", "Customer", FormMethod.Post, new { @class = "modify-customer", @id = "modify-customer-form" }))
+{
+
+    @Html.Hidden("Id", @Model.Id)
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        @*<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">*@
+        @Html.TextBox("Name", @Model.Name, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Address</label>
+        @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="">*@
+       @Html.TextBox("Address",@Model.Address,new{@class="form-control"})
+    </div>
+
+    @*<button type="submit" class="btn btn-primary btn-customer-modify">Modify Customer</button>*@
+  <input type="button" class="btn btn-info btn-customer-modify" id="modify_customer" value="Modify Customer" />
+
+}
+
+<script src="~/Scripts/jquery-1.4.1.min.js"></script>
+<script src="~/Scripts/validation-min.js"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+
+        // data validation
+
+        $("#modify-customer-form").valid([
+
+            { name: "Name", isNull: "The customer name can not be null", onFocus: "Please fill in customer name" },
+            { name: "Address", isNull: "The address can not be null", onFocus: "Please fill in the address" }, true
+        ]);
+
+
+        $("#modify_customer").click(function () {
+
+
+            $("#modify-customer-form").submit(function () {
+
+                $.ajax({
+
+                    type: "POST",
+                    timeout: 30000,
+                    url: "/Customer/ModifyCustomer",
+                    data: $("#modify-customer-form").serialize(),
+                    success: function (data) {
+
+                        if (data =="success") {
+
+                            alert('Modify Customer Successfully'); location.href = "/Customer/CustomersList";
+                        } else {
+                            alert('Can you modify Customer again?'); location.href = "/Customer/CustomersList";
+                        }
+                    }
+                });
+
+
+
+
+            });
+            $("#modify-customer-form").submit();
+        });
+
+
+    });
+
+</script>
